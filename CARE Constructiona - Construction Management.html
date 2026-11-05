@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CARE Constructiona - Construction Management</title>
+<style>
+:root{--bg:#e6eef9;--card:#fff;--tx:#14223a;--mut:#5b6b85;--line:#dbe4f0;--navy:#0b2a5c;--side:#0a2250;--g:#1c8c4e;--r:#e03c31;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1626;--card:#16233a;--tx:#e6edf8;--mut:#90a3c2;--line:#27395a}}
+:root[data-theme="dark"]{--bg:#0d1626;--card:#16233a;--tx:#e6edf8;--mut:#90a3c2;--line:#27395a}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.4 "Segoe UI",system-ui,Roboto,sans-serif}
+header.h{background:linear-gradient(90deg,#08224f,#0f3a82);color:#fff;padding:10px 16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-size:22px;font-weight:700;line-height:1}.logo small{display:block;font-size:10px;letter-spacing:2px;font-weight:400;opacity:.8;margin-top:3px}
+.ttl{font-size:18px;font-weight:700}.tg{margin-left:auto;font-style:italic;font-size:13px;opacity:.85}
+#wrap{display:flex}
+nav{background:var(--side);width:210px;flex:none;padding:12px 8px;display:flex;flex-direction:column;gap:3px;min-height:calc(100vh - 64px)}
+nav button{border:0;background:none;color:#c9d7f0;text-align:left;padding:10px 12px;border-radius:8px;font:inherit;display:flex;gap:10px;cursor:pointer}
+nav button.on{background:#1a73e8;color:#fff;font-weight:600}
+main{flex:1;min-width:0;padding:14px}
+.top{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}.top h1{margin:0;font-size:20px;margin-right:auto}
+select,input{font:inherit;color:var(--tx);background:var(--card);border:1px solid var(--line);border-radius:7px;padding:6px 8px;min-height:34px;max-width:100%}
+.kp{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));margin-bottom:12px}
+.kp div{border-radius:10px;padding:12px;border:1px solid var(--line);background:var(--card)}.kp span{font-size:12px;color:var(--mut)}.kp b{display:block;font-size:20px}
+.k1{background:#e1ecff!important}.k2{background:#dff3e6!important}.k3{background:#fde4e2!important}.k4{background:#e9e4fa!important}.kp div{color:#14223a}.kp span{color:#4a5a75!important}
+.gr{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:800px){.gr{grid-template-columns:1fr 1fr}.w2,.w3{grid-column:span 2}}
+@media(min-width:1250px){.gr{grid-template-columns:1fr 1fr 1fr}.w2{grid-column:span 2}.w3{grid-column:span 3}}
+.p{background:var(--card);border:2px solid;border-radius:10px;overflow:hidden}.p>h2{margin:0;color:#fff;font-size:14px;padding:8px 10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.p>h2 .n{background:#fff;color:#000;border-radius:50%;width:20px;height:20px;display:grid;place-items:center;font-size:12px}
+.p>h2 .c{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}.p>h2 select,.p>h2 input{min-height:28px;padding:2px 6px;font-size:12px}
+.p .bd{padding:8px;overflow-x:auto}
+.c1{border-color:#1565c0}.c1>h2{background:#1565c0}.c2{border-color:#1c8c4e}.c2>h2{background:#1c8c4e}.c3{border-color:#1e88c9}.c3>h2{background:#1e88c9}.c4{border-color:#ef8a17}.c4>h2{background:#ef8a17}.c5{border-color:#6a3fc2}.c5>h2{background:#6a3fc2}.c6{border-color:#d8332f}.c6>h2{background:#d8332f}.c7{border-color:#0f8b9d}.c7>h2{background:#0f8b9d}.c8{border-color:#0b2a5c}.c8>h2{background:#0b2a5c}.c9{border-color:#1c8c4e}.c9>h2{background:#1c8c4e}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:400px}th{background:rgba(120,150,200,.15);text-align:left;font-size:12px;padding:6px}td{padding:6px;border-bottom:1px solid var(--line)}
+.r{text-align:right}tfoot td{font-weight:700;border-bottom:0}
+.bt{border:0;background:#1a73e8;color:#fff;border-radius:6px;padding:5px 10px;cursor:pointer;font:inherit;font-size:12px}
+.pill{padding:2px 9px;border-radius:99px;font-size:12px;background:#d8f2e0;color:#146c3b}.pill.x{background:#fddad6;color:#b3261e}.pill.y{background:#e3e7ee;color:#444}
+.pos{color:var(--g);font-weight:600}.neg{color:var(--r);font-weight:600}
+.x{border:0;background:none;color:var(--mut);cursor:pointer}.emp{padding:14px;text-align:center;color:var(--mut)}
+.pl div{display:flex;justify-content:space-between;padding:9px 10px;border-radius:6px;margin-bottom:5px;font-weight:600;color:#14223a}
+dialog{border:0;border-radius:12px;padding:16px;width:min(400px,92vw);background:var(--card);color:var(--tx)}dialog::backdrop{background:rgba(0,0,0,.5)}
+dialog label{display:block;font-size:12px;color:var(--mut);margin:8px 0 2px}dialog input,dialog select{width:100%}.fr{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}
+svg text{fill:var(--mut);font-size:9px}
+@media(max-width:799px){#wrap{flex-direction:column}nav{width:100%;flex-direction:row;overflow-x:auto;min-height:0;padding:6px}nav button{white-space:nowrap;flex:none}.tg{display:none}.ttl{font-size:15px}}
+/* restyle: same structure, new look */
+:root{--bg:#f3f1ec;--card:#fff;--tx:#1f2a37;--mut:#6a7686;--line:#e7e3da}
+body{font-family:Manrope,"Segoe UI",system-ui,Roboto,sans-serif;font-size:14px}
+header.h{background:linear-gradient(100deg,#0f2b2a,#1d4a46);border-bottom:4px solid #f2a516;padding:12px 18px}
+.logo small{color:#f2c46a}.ttl{font-weight:800;letter-spacing:.2px}.tg{color:#f2c46a}
+nav{background:var(--card);border-right:1px solid var(--line);gap:4px;padding:14px 10px}
+nav button{color:var(--mut);border-radius:12px;font-weight:600;padding:11px 12px}
+nav button.on{background:rgba(242,165,22,.18);color:var(--tx);box-shadow:inset 4px 0 0 #f2a516}
+main{padding:18px}.top h1{font-size:24px;font-weight:800}
+select,input{border-radius:10px;border-color:var(--line)}
+.kp div{border:0;border-left:6px solid;border-radius:16px;box-shadow:0 2px 8px rgba(20,30,40,.07);padding:14px}
+.kp b{font-size:22px;font-weight:800}
+.k1{background:#eef3ff!important;border-left-color:#3b6fd8!important}.k2{background:#e9f7f0!important;border-left-color:#2e9e6b!important}.k3{background:#fdeeea!important;border-left-color:#d9503f!important}.k4{background:#fff3da!important;border-left-color:#f2a516!important}
+.gr{gap:16px}
+.p{border:1px solid var(--line);border-radius:16px;box-shadow:0 2px 10px rgba(20,30,40,.06)}
+.p>h2{background:var(--card);color:var(--tx);border-bottom:1px solid var(--line);border-left:6px solid var(--ac,#999);font-size:15px;font-weight:800;padding:10px 12px}
+.p>h2 .n{background:var(--ac,#999);color:#fff;border-radius:8px;width:24px;height:24px}
+.c1{--ac:#3b6fd8}.c2{--ac:#2e9e6b}.c3{--ac:#1f9bb3}.c4{--ac:#e58a1f}.c5{--ac:#8a5bd1}.c6{--ac:#d9503f}.c7{--ac:#148f8f}.c8{--ac:#243b55}.c9{--ac:#2e9e6b}
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9{border-color:var(--line)}
+th{background:transparent;color:var(--mut);border-bottom:2px solid var(--line);font-weight:700}
+tbody tr:nth-child(even){background:rgba(120,120,100,.06)}td{border-bottom:1px solid var(--line)}
+.bt{background:#f2a516;color:#2a1c00;border-radius:999px;font-weight:700;padding:6px 14px}
+.pill{border-radius:999px;font-weight:600}
+.pl div{border-radius:12px;padding:11px 12px}.pl div[style*="#0b2a5c"]{background:#0f2b2a!important}
+dialog{border-radius:18px}
+</style><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"></head><body>
+<header class="h"><div class="logo">CARE Constructiona Pvt Ltd.<small>BUILDING TODAY | FOR A BETTER TOMORROW</small></div><div class="ttl">Construction Management Application</div><div class="tg">Better Management Builds Greater Success</div></header>
+<div id="wrap"><nav id="nav"></nav><main id="main"></main></div>
+<dialog id="dlg"><form id="frm" method="dialog"><h2 id="dt" style="margin:0 0 6px;font-size:16px"></h2><div id="df"></div><div class="fr"><button type="button" class="bt" style="background:#8895ab" id="dc">Cancel</button><button class="bt">Save</button></div></form></dialog>
+<script>
+var KEY="care_app_v3",$=function(s){return document.querySelector(s)};
+function ds(o){var d=new Date();d.setDate(d.getDate()+o);return d.toISOString().slice(0,10)}
+var today=ds(0);
+function seed(){var pr=[["DHA Villa B-1 550","DHA Multan","2026-08-01","2026-12-30","In Progress"],["DHA Villa B-1 790","DHA Multan","2026-07-15","2026-12-31","In Progress"],["Gulberg Residence","Multan","2026-09-10","2027-02-28","In Progress"],["Commercial Plaza","Multan","2026-10-01","2027-04-30","In Progress"],["Farm House Project","Near Multan","2026-11-01","2027-04-30","Planning"]].map(function(a,i){return{id:i+1,name:a[0],loc:a[1],start:a[2],end:a[3],status:a[4]}});
+var lab=[["Muhammad Ali",1200],["Rashid Khan",1000],["Imran",1000],["Sajjad",1200],["Bilal",1000],["Asif",1000]].map(function(a,i){return{id:i+1,name:a[0],rate:a[1]}});
+var att=lab.map(function(l){return{lab:l.id,site:1,date:today,s:l.id==4?"H":"P",in:"08:00",out:"18:00",rem:l.id==4?"Half Day":""}});
+var led=[];for(var k=0;k<30;k++){led.push({id:k*2+1,date:ds(-k),site:k%4+1,desc:"Client payment",type:"Income",amt:150000+(k*13%7)*30000});led.push({id:k*2+2,date:ds(-k),site:k%4+1,desc:"Site expense",type:"Expense",amt:110000+(k*11%6)*20000})}
+return{projects:pr,labour:lab,att:att,purchases:[{id:1,date:today,site:1,item:"Cement (Maple Leaf)",qty:50,unit:"Bag",rate:1400},{id:2,date:today,site:1,item:"Bricks",qty:1000,unit:"Pcs",rate:18},{id:3,date:today,site:1,item:"Steel",qty:500,unit:"Kg",rate:260}],ledger:led,other:420000,nid:100}}
+var db;try{db=JSON.parse(localStorage.getItem(KEY))}catch(e){}if(!db||!db.projects)db=seed();
+function save(){try{localStorage.setItem(KEY,JSON.stringify(db))}catch(e){}}
+var st={pg:"dash",site:"all",ws:1,date:today,month:today.slice(0,7),per:"month"};
+var rs=function(n){return Math.round(n).toLocaleString("en-PK")};
+function wage(a){var L=db.labour.find(function(x){return x.id==a.lab});return L?(a.s=="P"?L.rate:a.s=="H"?L.rate/2:0):0}
+function inP(x){if(st.per=="all")return true;var n=st.per=="month"?7:4;return x.slice(0,n)==today.slice(0,n)}
+function PLB(){return{month:"This Month",year:"This Year",all:"All Time"}[st.per]}
+function stat(id,d){var inc=0,e=0;
+db.ledger.forEach(function(l){if((id&&l.site!=id)||(d&&l.date!=d)||(!d&&!inP(l.date)))return;l.type=="Income"?inc+=+l.amt:e+=+l.amt});
+db.purchases.forEach(function(p){if((id&&p.site!=id)||(d&&p.date!=d)||(!d&&!inP(p.date)))return;e+=p.qty*p.rate});
+db.att.forEach(function(a){if((id&&a.site!=id)||(d&&a.date!=d)||(!d&&!inP(a.date)))return;e+=wage(a)});return{inc:inc,exp:e,pl:inc-e}}
+function opt(a,s){return a.map(function(o){return'<option value="'+o[0]+'"'+(o[0]==s?" selected":"")+">"+o[1]+"</option>"}).join("")}
+var sites=function(){return db.projects.map(function(p){return[p.id,p.name]})};
+function wsSel(){return'<select onchange="st.ws=+this.value;go()">'+opt(sites(),st.ws)+"</select>"}
+function pc(n){return'<span class="'+(n>=0?"pos":"neg")+'">'+rs(n)+"</span>"}
+function tb(h,rows,f,e){if(!rows.length)return'<div class="emp">'+e+"</div>";return"<table><thead><tr>"+h.map(function(x){return"<th"+(/\(Rs|Qty|Rate|Days/.test(x)?' class="r"':"")+">"+x+"</th>"}).join("")+"</tr></thead><tbody>"+rows.join("")+"</tbody>"+(f?"<tfoot>"+f+"</tfoot>":"")+"</table>"}
+function P(n,cls,t,ctl,body,w){return'<section class="p '+cls+" "+(w||"")+'"><h2><span class="n">'+n+"</span>"+t+'<span class="c">'+(ctl||"")+'</span></h2><div class="bd">'+body+"</div></section>"}
+var pj=function(){return st.site=="all"?db.projects:db.projects.filter(function(p){return p.id==st.site})};
+var nm=function(id){var p=db.projects.find(function(x){return x.id==id});return p?p.name:"-"};
+var PN={
+1:function(w){return P(1,"c1","Project / Site Wise Overview",'<button class="bt" onclick="addProj()">+ Add Site</button>',tb(["#","Project / Site","Location","Start","End","Income (Rs.)","Expenses (Rs.)","Profit / Loss","Status",""],pj().map(function(p,i){var s=stat(p.id);return"<tr><td>"+(i+1)+"</td><td>"+p.name+"</td><td>"+p.loc+"</td><td>"+p.start+"</td><td>"+p.end+'</td><td class="r">'+rs(s.inc)+'</td><td class="r">'+rs(s.exp)+'</td><td class="r">'+pc(s.pl)+'</td><td><span class="pill '+(p.status=="Planning"?"y":"")+'">'+p.status+'</span></td><td><button class="x" onclick="del(\'projects\','+p.id+')">✕</button></td></tr>'}),"","No sites yet."),w||"w2")},
+2:function(w){var d=pj().map(function(p){var s=stat(p.id);return{n:p.name.replace("DHA Villa ","").replace(" Residence","").replace(" Project","").slice(0,10),i:s.inc,e:s.exp}}),m=Math.max.apply(null,d.map(function(x){return Math.max(x.i,x.e)}).concat([1])),o="",k=100/Math.max(d.length,1);
+d.forEach(function(x,j){var c=j*k+k/2,a=x.i/m*95,b=x.e/m*95;o+='<rect x="'+(c-8)+'" y="'+(105-a)+'" width="7" height="'+a+'" fill="#1c8c4e"/><rect x="'+(c+1)+'" y="'+(105-b)+'" width="7" height="'+b+'" fill="#e03c31"/><text x="'+c+'" y="117" text-anchor="middle">'+x.n+"</text>"});
+return P(2,"c2","Income vs Expense ("+PLB()+")","",'<svg viewBox="0 0 100 120" preserveAspectRatio="none" style="width:100%;height:210px"><line x1="0" x2="100" y1="105" y2="105" stroke="#9aa"/>'+o+'</svg><div style="font-size:12px;color:var(--mut)"><b style="color:#1c8c4e">■</b> Income &nbsp;<b style="color:#e03c31">■</b> Expense</div>',w)},
+3:function(w){var sd=st.ws,tw=0;var rows=db.labour.map(function(l,i){var a=db.att.find(function(x){return x.lab==l.id&&x.site==sd&&x.date==st.date})||{};var v=a.s?wage(a):0;tw+=v;
+return"<tr><td>"+(i+1)+"</td><td>"+l.name+'</td><td><input type="time" style="width:92px" value="'+(a.in||"")+'" onchange="sa('+l.id+",'in',this.value)\"></td><td><input type=\"time\" style=\"width:92px\" value=\""+(a.out||"")+'" onchange="sa('+l.id+",'out',this.value)\"></td><td><select onchange=\"sa("+l.id+",'s',this.value)\">"+opt([["","-"],["P","Present"],["H","Half Day"],["A","Absent"]],a.s||"")+'</select></td><td class="r">'+rs(v)+'</td><td><input style="width:90px" value="'+(a.rem||"")+'" onchange="sa('+l.id+",'rem',this.value)\"></td></tr>"});
+return P(3,"c3","Daily Labour Attendance & Wages",'<input type="date" value="'+st.date+'" onchange="st.date=this.value;go()">'+wsSel()+'<button class="bt" onclick="addLab()">+ Add Labour</button>',tb(["#","Labour Name","In","Out","Attendance","Daily Wages (Rs.)","Remarks"],rows,'<tr><td colspan="5">Total Labour: '+db.labour.length+'</td><td class="r">Rs. '+rs(tw)+"</td><td></td></tr>","Add labour to begin."),w)},
+4:function(w){var sd=st.ws,t=0;var rows=db.labour.map(function(l,i){var d=0;db.att.forEach(function(a){if(a.lab==l.id&&a.site==sd&&a.date.slice(0,7)==st.month)d+=a.s=="P"?1:a.s=="H"?.5:0});t+=d*l.rate;return"<tr><td>"+(i+1)+"</td><td>"+l.name+'</td><td class="r">'+d+'</td><td class="r">'+rs(l.rate)+'</td><td class="r">'+rs(d*l.rate)+"</td></tr>"});
+return P(4,"c4","Individual & Total Payment Sheet",wsSel()+'<input type="month" value="'+st.month+'" onchange="st.month=this.value;go()">',tb(["#","Name","Days","Rate (Rs.)","Amount (Rs.)"],rows,'<tr><td colspan="4">Total Payment (Rs.)</td><td class="r">'+rs(t)+"</td></tr>","No labour added."),w)},
+5:function(w){var sd=st.ws,t=0,L=db.purchases.filter(function(p){return p.site==sd});
+return P(5,"c5","Site Purchasings",wsSel()+'<button class="bt" onclick="addBuy()">+ Add Purchase</button>',tb(["#","Item","Qty","Unit","Rate (Rs.)","Amount (Rs.)",""],L.map(function(p,i){t+=p.qty*p.rate;return"<tr><td>"+(i+1)+"</td><td>"+p.item+'</td><td class="r">'+p.qty+"</td><td>"+p.unit+'</td><td class="r">'+rs(p.rate)+'</td><td class="r">'+rs(p.qty*p.rate)+'</td><td><button class="x" onclick="del(\'purchases\','+p.id+')">✕</button></td></tr>'}),'<tr><td colspan="5">Total Purchases</td><td class="r">Rs. '+rs(t)+"</td><td></td></tr>","No purchases for this site."),w)},
+6:function(w){var sd=st.ws,i=0,e=0,L=db.ledger.filter(function(l){return l.site==sd}).sort(function(a,b){return b.date<a.date?-1:1});L.forEach(function(l){l.type=="Income"?i+=+l.amt:e+=+l.amt});
+return P(6,"c6","Site Wise Income & Expenses",wsSel()+'<button class="bt" onclick="addLed()">+ Add Entry</button>',tb(["#","Date","Description","Type","Amount (Rs.)",""],L.slice(0,40).map(function(l,j){return"<tr><td>"+(j+1)+"</td><td>"+l.date+"</td><td>"+l.desc+'</td><td><span class="pill '+(l.type=="Income"?"":"x")+'">'+l.type+'</span></td><td class="r">'+rs(l.amt)+'</td><td><button class="x" onclick="del(\'ledger\','+l.id+')">✕</button></td></tr>'}),'<tr><td colspan="4">Income '+rs(i)+" | Expenses "+rs(e)+'</td><td class="r">'+pc(i-e)+"</td><td></td></tr>","No entries."),w)},
+7:function(w){var a=0,b=0;return P(7,"c7","Total Projects Income & Expenses Statement ("+PLB()+")","",tb(["#","Project / Site","Total Income (Rs.)","Total Expenses (Rs.)","Profit (Rs.)"],db.projects.map(function(p,i){var s=stat(p.id);a+=s.inc;b+=s.exp;return"<tr><td>"+(i+1)+"</td><td>"+p.name+'</td><td class="r">'+rs(s.inc)+'</td><td class="r">'+rs(s.exp)+'</td><td class="r">'+pc(s.pl)+"</td></tr>"}),'<tr><td colspan="2">Grand Total</td><td class="r">'+rs(a)+'</td><td class="r">'+rs(b)+'</td><td class="r">'+pc(a-b)+"</td></tr>","No projects."),w)},
+8:function(w){var t=stat(0),g=t.inc-t.exp;return P(8,"c8","Profit & Loss Statement ("+PLB()+")","",'<div class="pl"><div style="background:#dff3e6"><span>Total Income</span><span>'+rs(t.inc)+'</span></div><div style="background:#fde4e2"><span>Total Expenses</span><span>'+rs(t.exp)+'</span></div><div style="background:#e1ecff"><span>Gross Profit</span><span>'+rs(g)+'</span></div><div style="background:var(--card);color:var(--tx)"><span>Other Expenses (Office, Transport) <button class="x" onclick="setOth()">✎</button></span><span>'+rs(db.other)+'</span></div><div style="background:#0b2a5c;color:#fff"><span>Net Profit</span><span>'+rs(g-db.other)+"</span></div></div>",w)},
+9:function(w){var D=[],I=[],E=[];for(var k=13;k>=0;k--){var s=stat(0,ds(-k));D.push(ds(-k).slice(8)+"/"+ds(-k).slice(5,7));I.push(s.inc);E.push(s.exp)}
+var m=Math.max.apply(null,I.concat(E).concat([1])),ln=function(a,c){return'<polyline fill="none" stroke="'+c+'" stroke-width="1.5" points="'+a.map(function(v,i){return(i*7+8)+","+(85-v/m*75)}).join(" ")+'"/>'},xs=D.map(function(d,i){return i%3?"":'<text x="'+(i*7+8)+'" y="97" text-anchor="middle">'+d+"</text>"}).join("");
+var W=[1,2,3,4].map(function(n){var a=0,b=0;for(var k=0;k<7;k++){var s=stat(0,ds(-((4-n)*7+k)));a+=s.inc;b+=s.exp}return[a,b]}),wm=Math.max.apply(null,W.map(function(x){return Math.max(x[0],x[1])}).concat([1])),wb=W.map(function(x,i){return'<rect x="'+(i*25+5)+'" y="'+(85-x[0]/wm*75)+'" width="8" height="'+x[0]/wm*75+'" fill="#1c8c4e"/><rect x="'+(i*25+14)+'" y="'+(85-x[1]/wm*75)+'" width="8" height="'+x[1]/wm*75+'" fill="#e03c31"/><text x="'+(i*25+14)+'" y="97" text-anchor="middle">Week '+(i+1)+"</text>"}).join("");
+return P(9,"c9","Progress Graphs (Daily / Weekly)","",'<div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))"><div><b>Daily Income vs Expenses</b><svg viewBox="0 0 106 100" style="width:100%;height:190px"><line x1="5" x2="106" y1="85" y2="85" stroke="#9aa"/>'+ln(I,"#1c8c4e")+ln(E,"#e03c31")+xs+'</svg></div><div><b>Weekly Project Progress (Income)</b><svg viewBox="0 0 106 100" style="width:100%;height:190px"><line x1="0" x2="106" y1="85" y2="85" stroke="#9aa"/>'+wb+"</svg></div></div>",w)}};
+PN[10]=function(w){return P("★","c8","Key Features / Requirements Summary","",'<ol style="margin:0;padding-left:20px;column-width:260px;column-gap:24px"><li>Project / Site name management</li><li>Daily labour name &amp; attendance</li><li>Daily labour wages</li><li>Labour in / out time</li><li>Labour individual / total attendance &amp; individual site payment sheet</li><li>Site purchasings</li><li>Daily, weekly, monthly &amp; site-wise income and expenditures with profit &amp; loss statement</li><li>Total projects income &amp; expenses with profit &amp; loss</li><li>Progress graphs (daily basis) for income &amp; expenses</li></ol><p style="margin:8px 0 0;font-style:italic;color:var(--mut)">Your Vision, Our Management</p>',w)};
+var NV=[["dash","Dashboard","🏠"],["p1","Projects / Sites","🏢"],["p3","Labour & Attendance","🕘"],["p4","Daily Wages","💵"],["p5","Site Purchases","🛒"],["p6","Income & Expenses","📈"],["p7","Reports","📄"],["p8","Profit & Loss","💹"],["p9","Graphs & Analytics","📊"],["set","Settings","⚙"]];
+function go(){$("#nav").innerHTML=NV.map(function(n){return'<button class="'+(st.pg==n[0]?"on":"")+'" onclick="st.pg=\''+n[0]+"';go()\"><span>"+n[2]+"</span>"+n[1]+"</button>"}).join("");
+var h,t=stat(0),sel='<select onchange="st.site=this.value;go()">'+opt([["all","All Projects"]].concat(sites()),st.site)+"</select><select onchange=\"st.per=this.value;go()\">"+opt([["month","This Month"],["year","This Year"],["all","All Time"]],st.per)+"</select>";
+var top='<div class="top"><h1>'+(NV.find(function(n){return n[0]==st.pg})[1])+"</h1><span>Today ("+today+")</span>"+sel+"</div>";
+if(st.pg=="dash")h=top+'<div class="kp"><div class="k1"><span>Total Projects</span><b>'+db.projects.length+' Active Sites</b></div><div class="k2"><span>Total Income ('+PLB()+')</span><b>Rs. '+rs(t.inc)+'</b></div><div class="k3"><span>Total Expenses ('+PLB()+')</span><b>Rs. '+rs(t.exp)+'</b></div><div class="k4"><span>Net Profit ('+PLB()+')</span><b>Rs. '+rs(t.inc-t.exp)+'</b></div></div><div class="gr">'+[1,2,3,4,5,6,7,8].map(function(i){return PN[i]()}).join("")+PN[9]("w3")+PN[10]("w3")+"</div>";
+else if(st.pg=="set")h=top+'<div class="p c8" style="padding:14px"><p>Data is saved on this device.</p><button class="bt" onclick="if(confirm(\'Erase all data and restore sample data?\')){db=seed();save();go()}">Reset to sample data</button></div>';
+else h=top+'<div class="gr">'+PN[st.pg.slice(1)]("w3")+"</div>";
+$("#main").innerHTML=h}
+function sa(l,k,v){var a=db.att.find(function(x){return x.lab==l&&x.site==st.ws&&x.date==st.date});if(!a){a={lab:l,site:st.ws,date:st.date,s:""};db.att.push(a)}a[k]=v;save();var y=scrollY;go();scrollTo(0,y)}
+function del(c,id){if(!confirm("Delete this record?"))return;db[c]=db[c].filter(function(x){return x.id!=id});save();go()}
+function form(t,f,cb){$("#dt").textContent=t;$("#df").innerHTML=f.map(function(x){return"<label>"+x[1]+"</label>"+(x[2]=="select"?'<select name="'+x[0]+'">'+opt(x[3])+"</select>":'<input name="'+x[0]+'" type="'+x[2]+'" value="'+(x[3]||"")+'" required>')}).join("");
+$("#frm").onsubmit=function(e){e.preventDefault();var o={};f.forEach(function(x){o[x[0]]=$("#frm").elements[x[0]].value});$("#dlg").close();cb(o);save();go()};$("#dc").onclick=function(){$("#dlg").close()};$("#dlg").showModal()}
+function nid(){return db.nid++}
+function addProj(){form("Add project / site",[["name","Project name","text"],["loc","Location","text"],["start","Start date","date",today],["end","End date","date"],["status","Status","select",[["In Progress","In Progress"],["Planning","Planning"],["Completed","Completed"]]]],function(o){o.id=nid();db.projects.push(o)})}
+function addLab(){form("Add labour",[["name","Name","text"],["rate","Daily wage (Rs.)","number"]],function(o){db.labour.push({id:nid(),name:o.name,rate:+o.rate})})}
+function addBuy(){form("Add purchase",[["date","Date","date",today],["item","Item description","text"],["qty","Quantity","number"],["unit","Unit","text"],["rate","Rate (Rs.)","number"]],function(o){o.id=nid();o.site=st.ws;o.qty=+o.qty;o.rate=+o.rate;db.purchases.push(o)})}
+function addLed(){form("Add income / expense",[["date","Date","date",today],["desc","Description","text"],["type","Type","select",[["Income","Income"],["Expense","Expense"]]],["amt","Amount (Rs.)","number"]],function(o){o.id=nid();o.site=st.ws;o.amt=+o.amt;db.ledger.push(o)})}
+function setOth(){form("Other expenses",[["v","Office, transport etc. (Rs.)","number",db.other]],function(o){db.other=+o.v})}
+go();
+</script></body></html>
